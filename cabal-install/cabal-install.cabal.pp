@@ -143,8 +143,13 @@ Version:            3.3.0.0
         Distribution.Client.IndexUtils.IndexState
         Distribution.Client.IndexUtils.Timestamp
         Distribution.Client.Init
+        Distribution.Client.Init.Command
+        Distribution.Client.Init.Defaults
+        Distribution.Client.Init.FileCreators
         Distribution.Client.Init.Heuristics
         Distribution.Client.Init.Licenses
+        Distribution.Client.Init.Prompt
+        Distribution.Client.Init.Utils
         Distribution.Client.Init.Types
         Distribution.Client.Install
         Distribution.Client.InstallPlan
