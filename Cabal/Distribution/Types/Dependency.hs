@@ -80,7 +80,10 @@ instance Pretty Dependency where
       where
         withSubLibs doc
             | sublibs == mainLib = doc
-            | otherwise          = doc <<>> PP.colon <<>> PP.braces prettySublibs
+            | otherwise          =
+                doc <<>> if Set.toList sublibs == [LMainLibName]
+                         then PP.empty
+                         else PP.colon <<>> PP.braces prettySublibs
 
         prettySublibs = PP.hsep $ PP.punctuate PP.comma $ prettySublib <$> Set.toList sublibs
 

@@ -30,6 +30,7 @@ import qualified UnitTests.Distribution.Version (versionTests)
 import qualified UnitTests.Distribution.PkgconfigVersion (pkgconfigVersionTests)
 import qualified UnitTests.Distribution.SPDX (spdxTests)
 import qualified UnitTests.Distribution.Described
+import qualified UnitTests.Distribution.Types.Dependency
 import qualified UnitTests.Distribution.Types.GenericPackageDescription
 
 tests :: Int -> TestTree
@@ -64,6 +65,8 @@ tests mtimeChangeCalibrated =
         UnitTests.Distribution.System.tests
     , testGroup "Distribution.Types.GenericPackageDescription"
         UnitTests.Distribution.Types.GenericPackageDescription.tests
+    , testGroup "Distribution.Types.Dependency"
+        UnitTests.Distribution.Types.Dependency.tests
     , testGroup "Distribution.Version"
         UnitTests.Distribution.Version.versionTests
     , testGroup "Distribution.Types.PkgconfigVersion(Range)"
